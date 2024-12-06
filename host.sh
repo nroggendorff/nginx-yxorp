@@ -4,7 +4,7 @@ R_DOMAIN=$1
 EMAIL=$3
 
 mkdir /etc/nginx/sites-available && mkdir /etc/nginx/sites-enabled
-printf "\ninclude /etc/nginx/sites-enabled/*;" >> /etc/nginx/nginx.conf
+sed -i '/http {/a \ \ \ \ include /etc/nginx/sites-enabled/*;' /etc/nginx/nginx.conf
 
 printf "server {\n\tlisten 80; \
 \n\tserver_name $HOST_DOMAIN; \
