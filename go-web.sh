@@ -13,9 +13,9 @@ sudo apt-get update
 
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-git clone nroggendorff/nginx-yxorp .
+git clone https://github.com/nroggendorff/nginx-yxorp.git .
 
-docker build yxorp -f yxorp/Dockerfile -t nginx-yxorp
+docker build . -t nginx-yxorp
 
 SESSION_NAME="yxorp"
 
